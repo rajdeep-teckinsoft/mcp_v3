@@ -89,8 +89,9 @@ if __name__ == "__main__":
     def serial_receive():
         while serial.canReadLine():
             data = serial.readLine()
+            formatted_data = data.decode()
             # data = data.rstrip('\r\n')
-            ui.receivedData.setText(data)
+            ui.receivedData.setText(formatted_data)
 
     @QtCore.pyqtSlot()
     def serial_send(data_to_send):
