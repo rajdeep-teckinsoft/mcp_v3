@@ -1,75 +1,48 @@
-from time import sleep
-
 from PyQt5.QtCore import Qt
 from PyQt5 import QtSerialPort
-
 from home import *
 
 MOMENTARY_SWITCH_ON_TIME_SEC = 0.5
 
 # 1st column of keys
-CYCLE_START_ACTIVE = 'D1'
-CYCLE_START_INACTIVE = 'D2'
+CYCLE_START_PRESSED = '1'
 
 # 2nd column of keys
-CYCLE_STOP_ACTIVE = 'D3'
-CYCLE_STOP_INACTIVE = 'D4'
+CYCLE_STOP_PRESSED = '2'
 
 # 3rd column of keys
-DRV_ACTIVE = 'D5'
-DRV_INACTIVE = 'D6'
-JOG_ACTIVE = 'D7'
-JOG_INACTIVE = 'D8'
-X_ACTIVE = 'D9'
-X_INACTIVE = 'D10'
-PLUS_ACTIVE = 'D11'
-PLUS_INACTIVE = 'D12'
+DRV_PRESSED = '3'
+JOG_PRESSED = '4'
+X_PRESSED = '5'
+PLUS_PRESSED = '6'
 
 # 4th column of keys
-Z_LOCK_ACTIVE = 'D13'
-Z_LOCK_INACTIVE = 'D14'
-MDI_ACTIVE = 'D15'
-MDI_INACTIVE = 'D16'
-Y_ACTIVE = 'D17'
-Y_INACTIVE = 'D18'
-VVV_ACTIVE = 'D19'
-VVV_INACTIVE = 'D20'
+Z_LOCK_PRESSED = '7'
+MDI_PRESSED = '8'
+Y_PRESSED = '9'
+VVV_PRESSED = '10'
 
 # 5th column of keys
-DRY_RUN_ACTIVE = 'D21'
-DRY_RUN_INACTIVE = 'D22'
-AUTO_ACTIVE = 'D23'
-AUTO_INACTIVE = 'D24'
-Z_ACTIVE = 'D25'
-Z_INACTIVE = 'D26'
-MINUS_ACTIVE = 'D27'
-MINUS_INACTIVE = 'D28'
+DRY_RUN_PRESSED = '11'
+AUTO_PRESSED = '12'
+Z_PRESSED = '13'
+MINUS_PRESSED = '14'
 
 # 6th column of keys
-NC_REF_ACTIVE = 'D29'
-NC_REF_INACTIVE = 'D30'
-NC_OFF_ACTIVE = 'D31'
-NC_OFF_INACTIVE = 'D32'
-RET_FOR_ACTIVE = 'D33'
-RET_FOR_INACTIVE = 'D34'
-RET_REV_ACTIVE = 'D35'
-RET_REV_INACTIVE = 'D36'
+NC_REF_PRESSED = '15'
+NC_OFFSET_PRESSED = '16'
+RET_FOR_PRESSED = '17'
+RET_REV_PRESSED = '18'
 
 # 7th column of keys
-PRC_END_ACTIVE = 'D37'
-PRC_END_INACTIVE = 'D38'
-ALM_OVR_ACTIVE = 'D39'
-ALM_OVR_INACTIVE = 'D40'
-ALM_RST_ACTIVE = 'D41'
-ALM_RST_INACTIVE = 'D42'
-LOCK_RST_ACTIVE = 'D43'
-LOCK_RST_INACTIVE = 'D44'
+PRC_END_PRESSED = '19'
+ALM_OVR_PRESSED = '20'
+ALM_RST_PRESSED = '21'
+LOCK_RST_PRESSED = '22'
 
 # 8th column of keys
-LASER_ON_ACTIVE = 'D45'
-LASER_ON_INACTIVE = 'D46'
-
-LASER_STATUS_CHECK = 'S1'
+LASER_ON_PRESSED = '23'
+LASER_ON_UNPRESSED = '24'
 
 serial_connected = False
 
@@ -77,11 +50,11 @@ serial_connected = False
 if __name__ == "__main__":
     import sys
 
+    # Press Alt+F4 to close the window
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     MainWindow.setWindowFlags(Qt.FramelessWindowHint)
     MainWindow.showFullScreen()
-    # Press Alt+F4 to close the window
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
 
@@ -91,7 +64,6 @@ if __name__ == "__main__":
             data = serial.readLine()
             formatted_data = QtCore.QTextCodec.codecForMib(106).toUnicode(data)
             formatted_data = formatted_data.rstrip('\r\n')
-            # data = data.rstrip('\r\n')
             ui.receivedData.setText(formatted_data)
 
     @QtCore.pyqtSlot()
@@ -119,317 +91,101 @@ if __name__ == "__main__":
                 if not ret:
                     ui.proteck_logo.setStyleSheet("background-color: red")
 
-    # set up UI logics--------------------------------------------------
-    @QtCore.pyqtSlot()
-    def auto_ui_logic():
-        ui.jogButton.setChecked(False)
-        ui.mdiButton.setChecked(False)
-        jog_ui_logic()
-        x_jog_ui_logic()
-        y_jog_ui_logic()
-        z_jog_ui_logic()
-
-
-    @QtCore.pyqtSlot()
-    def mdi_ui_logic():
-        ui.jogButton.setChecked(False)
-        ui.autoButton.setChecked(False)
-        jog_ui_logic()
-        x_jog_ui_logic()
-        y_jog_ui_logic()
-        z_jog_ui_logic()
-
-
-    @QtCore.pyqtSlot()
-    def jog_ui_logic():
-        if ui.jogButton.isChecked():
-            ui.xButton.setEnabled(True)
-            ui.yButton.setEnabled(True)
-            ui.zButton.setEnabled(True)
-            ui.mdiButton.setChecked(False)
-            ui.autoButton.setChecked(False)
-        else:
-            ui.xButton.setChecked(False)
-            ui.yButton.setChecked(False)
-            ui.zButton.setChecked(False)
-            ui.xButton.setEnabled(False)
-            ui.yButton.setEnabled(False)
-            ui.zButton.setEnabled(False)
-            ui.plusButton.setEnabled(False)
-            ui.vvvButton.setChecked(False)
-            ui.vvvButton.setEnabled(False)
-            ui.minusButton.setEnabled(False)
-
-
-    @QtCore.pyqtSlot()
-    def x_jog_ui_logic():
-        if ui.xButton.isChecked():
-            ui.plusButton.setEnabled(True)
-            ui.vvvButton.setEnabled(True)
-            ui.minusButton.setEnabled(True)
-            ui.yButton.setChecked(False)
-            ui.zButton.setChecked(False)
-        else:
-            ui.plusButton.setEnabled(False)
-            ui.vvvButton.setChecked(False)
-            ui.vvvButton.setEnabled(False)
-            ui.minusButton.setEnabled(False)
-
-
-    @QtCore.pyqtSlot()
-    def y_jog_ui_logic():
-        if ui.yButton.isChecked():
-            ui.plusButton.setEnabled(True)
-            ui.vvvButton.setEnabled(True)
-            ui.minusButton.setEnabled(True)
-            ui.xButton.setChecked(False)
-            ui.zButton.setChecked(False)
-        else:
-            ui.plusButton.setEnabled(False)
-            ui.vvvButton.setChecked(False)
-            ui.vvvButton.setEnabled(False)
-            ui.minusButton.setEnabled(False)
-
-
-    @QtCore.pyqtSlot()
-    def z_jog_ui_logic():
-        if ui.zButton.isChecked():
-            ui.plusButton.setEnabled(True)
-            ui.vvvButton.setEnabled(True)
-            ui.minusButton.setEnabled(True)
-            ui.yButton.setChecked(False)
-            ui.xButton.setChecked(False)
-        else:
-            ui.plusButton.setEnabled(False)
-            ui.vvvButton.setChecked(False)
-            ui.vvvButton.setEnabled(False)
-            ui.minusButton.setEnabled(False)
-
-
-    jog_ui_logic()
-    x_jog_ui_logic()
-    y_jog_ui_logic()
-    z_jog_ui_logic()
-    ui.jogButton.clicked.connect(lambda: jog_ui_logic())
-    ui.xButton.clicked.connect(lambda: x_jog_ui_logic())
-    ui.yButton.clicked.connect(lambda: y_jog_ui_logic())
-    ui.zButton.clicked.connect(lambda: z_jog_ui_logic())
-    ui.mdiButton.clicked.connect(lambda: mdi_ui_logic())
-    ui.autoButton.clicked.connect(lambda: auto_ui_logic())
-
     # set up push button functions---------------------------------------
-    """"
-    serial_connected = communication.connect_ethercat0()
-    if serial_connected:
-        print("Serial is connected")
-    else:
-        serial_connected = communication.connect_ethercat1()
-        if serial_connected:
-            print("Serial is connected")
-        else:
-            serial_connected = communication.connect_ethercat2()
-            if serial_connected:
-                print("Serial is connected")
-            else:
-                serial_connected = communication.connect_ethercat3()
-                if serial_connected:
-                    print("Serial is connected")
-                else:
-                    ui.proteck_logo.setStyleSheet("background-color: red")
-                    print("Serial is not connected. Please check!")
-    """
-
-
     @QtCore.pyqtSlot()
     def cycle_start_function():
-        serial_send(CYCLE_START_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(CYCLE_START_INACTIVE)
-
+        serial_send(CYCLE_START_PRESSED)
 
     @QtCore.pyqtSlot()
     def cycle_stop_function():
-        serial_send(CYCLE_STOP_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(CYCLE_STOP_INACTIVE)
-
+        serial_send(CYCLE_STOP_PRESSED)
 
     @QtCore.pyqtSlot()
     def drv_function():
-        if ui.drvButton.isChecked():
-            serial_send(DRV_ACTIVE)
-        else:
-            serial_send(DRV_INACTIVE)
-
+        serial_send(DRV_PRESSED)
 
     @QtCore.pyqtSlot()
     def z_lock_function():
-        if ui.zLockButton.isChecked():
-            serial_send(Z_LOCK_ACTIVE)
-        else:
-            serial_send(Z_LOCK_INACTIVE)
-
+        serial_send(Z_LOCK_PRESSED)
 
     @QtCore.pyqtSlot()
     def dry_run_function():
-        if ui.dryRunButton.isChecked():
-            serial_send(DRY_RUN_ACTIVE)
-        else:
-            serial_send(DRY_RUN_INACTIVE)
-
+        serial_send(DRY_RUN_PRESSED)
 
     @QtCore.pyqtSlot()
     def jog_function():
-        if ui.jogButton.isChecked():
-            serial_send(JOG_ACTIVE)
-        else:
-            serial_send(JOG_INACTIVE)
-
+        serial_send(JOG_PRESSED)
 
     @QtCore.pyqtSlot()
     def mdi_function():
-        if ui.mdiButton.isChecked():
-            serial_send(MDI_ACTIVE)
-        else:
-            serial_send(MDI_INACTIVE)
-
+        serial_send(MDI_PRESSED)
 
     @QtCore.pyqtSlot()
     def auto_function():
-        if ui.autoButton.isChecked():
-            serial_send(AUTO_ACTIVE)
-        else:
-            serial_send(AUTO_INACTIVE)
-
+        serial_send(AUTO_PRESSED)
 
     @QtCore.pyqtSlot()
     def x_jog_function():
-        if ui.xButton.isChecked():
-            serial_send(X_ACTIVE)
-        else:
-            serial_send(X_INACTIVE)
-
+        serial_send(X_PRESSED)
 
     @QtCore.pyqtSlot()
     def y_jog_function():
-        if ui.yButton.isChecked():
-            serial_send(Y_ACTIVE)
-        else:
-            serial_send(Y_INACTIVE)
-
+        serial_send(Y_PRESSED)
 
     @QtCore.pyqtSlot()
     def z_jog_function():
-        if ui.zButton.isChecked():
-            serial_send(Z_ACTIVE)
-        else:
-            serial_send(Z_INACTIVE)
-
+        serial_send(Z_PRESSED)
 
     @QtCore.pyqtSlot()
     def plus_jog_function():
-        serial_send(PLUS_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(PLUS_INACTIVE)
-
+        serial_send(PLUS_PRESSED)
 
     @QtCore.pyqtSlot()
     def minus_jog_function():
-        serial_send(MINUS_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(MINUS_INACTIVE)
-
+        serial_send(MINUS_PRESSED)
 
     @QtCore.pyqtSlot()
     def vvv_jog_function():
-        if ui.vvvButton.isChecked():
-            serial_send(VVV_ACTIVE)
-        else:
-            serial_send(VVV_INACTIVE)
-
+        serial_send(VVV_PRESSED)
 
     @QtCore.pyqtSlot()
     def nc_ref_function():
-        if ui.ncRefButton.isChecked():
-            serial_send(NC_REF_ACTIVE)
-        else:
-            serial_send(NC_REF_INACTIVE)
-
+        serial_send(NC_REF_PRESSED)
 
     @QtCore.pyqtSlot()
     def nc_offset_function():
-        if ui.ncOffsetButton.isChecked():
-            serial_send(NC_OFF_ACTIVE)
-        else:
-            serial_send(NC_OFF_INACTIVE)
-
+        serial_send(NC_OFFSET_PRESSED)
 
     @QtCore.pyqtSlot()
     def ret_for_function():
-        serial_send(RET_FOR_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(RET_FOR_INACTIVE)
-
+        serial_send(RET_FOR_PRESSED)
 
     @QtCore.pyqtSlot()
     def ret_rev_function():
-        serial_send(RET_REV_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(RET_REV_INACTIVE)
-
+        serial_send(RET_REV_PRESSED)
 
     @QtCore.pyqtSlot()
     def prc_end_function():
-        serial_send(PRC_END_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(PRC_END_INACTIVE)
-
+        serial_send(PRC_END_PRESSED)
 
     @QtCore.pyqtSlot()
     def alm_ovr_function():
-        serial_send(ALM_OVR_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(ALM_OVR_INACTIVE)
-
+        serial_send(ALM_OVR_PRESSED)
 
     @QtCore.pyqtSlot()
     def alm_rst_function():
-        serial_send(ALM_RST_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(ALM_RST_INACTIVE)
-
+        serial_send(ALM_RST_PRESSED)
 
     @QtCore.pyqtSlot()
     def lock_rst_function():
-        serial_send(LOCK_RST_ACTIVE)
-        sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-        serial_send(LOCK_RST_INACTIVE)
-
-
-    """
-    def laser_status_check():
-        serial_send(LASER_STATUS_CHECK)
-        received = communication.read_data()
-        if received:
-            ui.laserReadyLamp.setPixmap(QtGui.QPixmap("images/laserready_on.png"))
-        else:
-            ui.laserReadyLamp.setPixmap(QtGui.QPixmap("images/laserready_off.png"))
-
-
-    laserTimer = QTimer()
-    laserTimer.timeout.connect(lambda: laser_status_check())
-    """
-
+        serial_send(LOCK_RST_PRESSED)
 
     @QtCore.pyqtSlot()
     def laser_on_function():
         if ui.laserOnButton.isChecked():
-            serial_send(LASER_ON_ACTIVE)
-            sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
-            serial_send(LASER_STATUS_CHECK)
+            serial_send(LASER_ON_PRESSED)
         else:
-            serial_send(LASER_ON_INACTIVE)
-
+            serial_send(LASER_ON_UNPRESSED)
 
     ui.cycleStartButton.clicked.connect(lambda: cycle_start_function())
     ui.cycleStopButton.clicked.connect(lambda: cycle_stop_function())
