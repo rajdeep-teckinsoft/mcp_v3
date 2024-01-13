@@ -423,6 +423,8 @@ if __name__ == "__main__":
     def laser_on_function():
         if ui.laserOnButton.isChecked():
             serial_send(LASER_ON_ACTIVE)
+            sleep(MOMENTARY_SWITCH_ON_TIME_SEC)
+            serial_send(LASER_STATUS_CHECK)
         else:
             serial_send(LASER_ON_INACTIVE)
 
