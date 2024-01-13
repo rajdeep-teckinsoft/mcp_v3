@@ -69,9 +69,9 @@ if __name__ == "__main__":
             formatted_data = formatted_data.rstrip('\r\n')
             array_data = list(formatted_data)
             if array_data[0] == '1':
-                ui.cycleStartButton.setIcon(icon_cycle_start_on)
+                ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_on))
             else:
-                ui.cycleStartButton.setIcon(icon_cycle_start_off)
+                ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_off))
 
     @QtCore.pyqtSlot()
     def serial_send(data_to_send):
