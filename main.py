@@ -88,8 +88,8 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def serial_receive():
         while serial.canReadLine():
-            data = serial.readLine().decode()
-            data = data.rstrip('\r\n')
+            data = serial.readLine()
+            # data = data.rstrip('\r\n')
             ui.receivedData.setText(data)
 
     @QtCore.pyqtSlot()
