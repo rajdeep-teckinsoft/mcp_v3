@@ -89,7 +89,8 @@ if __name__ == "__main__":
     def serial_receive():
         while serial.canReadLine():
             data = serial.readLine()
-            formatted_data = data.decode()
+            formatted_data = QtCore.QTextCodec.codecForMib(106).toUnicode(data)
+            formatted_data = formatted_data.rstrip('\r\n')
             # data = data.rstrip('\r\n')
             ui.receivedData.setText(formatted_data)
 
