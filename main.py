@@ -1,5 +1,6 @@
-from PyQt5.QtCore import Qt, QTimer
 from PyQt5 import QtSerialPort
+from PyQt5.QtCore import Qt, QTimer
+
 from home import *
 
 MOMENTARY_SWITCH_ON_TIME_MS = 500
@@ -45,7 +46,8 @@ LASER_ON_PRESSED = '23'
 
 ALL_BUTTONS_UNPRESSED = '0'
 
-serial_connected = False
+icon_cycle_start_on = QtGui.QPixmap("images/on/cyclestart.png")
+icon_cycle_start_off = QtGui.QPixmap("images/off/cyclestart.png")
 
 
 if __name__ == "__main__":
@@ -65,7 +67,11 @@ if __name__ == "__main__":
             data = serial.readLine()
             formatted_data = QtCore.QTextCodec.codecForMib(106).toUnicode(data)
             formatted_data = formatted_data.rstrip('\r\n')
-            ui.receivedData.setText(formatted_data)
+            array_data = list(formatted_data)
+            if array_data[0] == '1':
+                ui.cycleStartButton.setIcon(icon_cycle_start_on)
+            else:
+                ui.cycleStartButton.setIcon(icon_cycle_start_off)
 
     @QtCore.pyqtSlot()
     def serial_send(data_to_send):
