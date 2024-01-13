@@ -46,9 +46,6 @@ LASER_ON_PRESSED = '23'
 
 ALL_BUTTONS_UNPRESSED = '0'
 
-icon_cycle_start_on = QtGui.QPixmap("images/on/cyclestart.png")
-icon_cycle_start_off = QtGui.QPixmap("images/off/cyclestart.png")
-
 
 if __name__ == "__main__":
     import sys
@@ -60,6 +57,9 @@ if __name__ == "__main__":
     MainWindow.showFullScreen()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
+
+    icon_cycle_start_on = QtGui.QPixmap("images/on/cyclestart.png")
+    icon_cycle_start_off = QtGui.QPixmap("images/off/cyclestart.png")
 
     @QtCore.pyqtSlot()
     def serial_receive():
