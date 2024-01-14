@@ -1,5 +1,5 @@
 from PyQt5 import QtSerialPort
-from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtCore import Qt
 
 from home import *
 
@@ -244,7 +244,9 @@ if __name__ == "__main__":
         serial.write(formatted_data)
         serial.flush()
 
+
     serial = QtSerialPort.QSerialPort()
+
 
     @QtCore.pyqtSlot()
     def usb_connect_function():
@@ -273,9 +275,10 @@ if __name__ == "__main__":
         else:
             ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
 
+
     usb_connect_function()
 
-    unpressedTimer = QTimer()
+    # unpressedTimer = QTimer()
 
     # set up push button functions---------------------------------------
     @QtCore.pyqtSlot()
@@ -286,133 +289,133 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def cycle_start_function():
         serial_send(CYCLE_START_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def cycle_stop_function():
         serial_send(CYCLE_STOP_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def drv_function():
         serial_send(DRV_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def z_lock_function():
         serial_send(Z_LOCK_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def dry_run_function():
         serial_send(DRY_RUN_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def jog_function():
         serial_send(JOG_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def mdi_function():
         serial_send(MDI_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def auto_function():
         serial_send(AUTO_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def x_jog_function():
         serial_send(X_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def y_jog_function():
         serial_send(Y_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def z_jog_function():
         serial_send(Z_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def plus_jog_function():
         serial_send(PLUS_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def minus_jog_function():
         serial_send(MINUS_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def vvv_jog_function():
         serial_send(VVV_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def nc_ref_function():
         serial_send(NC_REF_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def nc_offset_function():
         serial_send(NC_OFFSET_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def ret_for_function():
         serial_send(RET_FOR_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def ret_rev_function():
         serial_send(RET_REV_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def prc_end_function():
         serial_send(PRC_END_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def alm_ovr_function():
         serial_send(ALM_OVR_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def alm_rst_function():
         serial_send(ALM_RST_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def lock_rst_function():
         serial_send(LOCK_RST_PRESSED)
-        unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
+        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
@@ -423,28 +426,52 @@ if __name__ == "__main__":
             serial_send(LASER_ON_UNPRESSED)
 
 
-    ui.cycleStartButton.clicked.connect(lambda: cycle_start_function())
-    ui.cycleStopButton.clicked.connect(lambda: cycle_stop_function())
-    ui.drvButton.clicked.connect(lambda: drv_function())
-    ui.zLockButton.clicked.connect(lambda: z_lock_function())
-    ui.dryRunButton.clicked.connect(lambda: dry_run_function())
-    ui.jogButton.clicked.connect(lambda: jog_function())
-    ui.mdiButton.clicked.connect(lambda: mdi_function())
-    ui.autoButton.clicked.connect(lambda: auto_function())
-    ui.xButton.clicked.connect(lambda: x_jog_function())
-    ui.yButton.clicked.connect(lambda: y_jog_function())
-    ui.zButton.clicked.connect(lambda: z_jog_function())
-    ui.plusButton.clicked.connect(lambda: plus_jog_function())
-    ui.vvvButton.clicked.connect(lambda: vvv_jog_function())
-    ui.minusButton.clicked.connect(lambda: minus_jog_function())
-    ui.ncRefButton.clicked.connect(lambda: nc_ref_function())
-    ui.ncOffsetButton.clicked.connect(lambda: nc_offset_function())
-    ui.retForButton.clicked.connect(lambda: ret_for_function())
-    ui.retRevButton.clicked.connect(lambda: ret_rev_function())
-    ui.prcEndButton.clicked.connect(lambda: prc_end_function())
-    ui.almOvrButton.clicked.connect(lambda: alm_ovr_function())
-    ui.almRstButton.clicked.connect(lambda: alm_rst_function())
-    ui.lockRstButton.clicked.connect(lambda: lock_rst_function())
+    ui.cycleStartButton.pressed.connect(lambda: cycle_start_function())
+    ui.cycleStopButton.pressed.connect(lambda: cycle_stop_function())
+    ui.drvButton.pressed.connect(lambda: drv_function())
+    ui.zLockButton.pressed.connect(lambda: z_lock_function())
+    ui.dryRunButton.pressed.connect(lambda: dry_run_function())
+    ui.jogButton.pressed.connect(lambda: jog_function())
+    ui.mdiButton.pressed.connect(lambda: mdi_function())
+    ui.autoButton.pressed.connect(lambda: auto_function())
+    ui.xButton.pressed.connect(lambda: x_jog_function())
+    ui.yButton.pressed.connect(lambda: y_jog_function())
+    ui.zButton.pressed.connect(lambda: z_jog_function())
+    ui.plusButton.pressed.connect(lambda: plus_jog_function())
+    ui.vvvButton.pressed.connect(lambda: vvv_jog_function())
+    ui.minusButton.pressed.connect(lambda: minus_jog_function())
+    ui.ncRefButton.pressed.connect(lambda: nc_ref_function())
+    ui.ncOffsetButton.pressed.connect(lambda: nc_offset_function())
+    ui.retForButton.pressed.connect(lambda: ret_for_function())
+    ui.retRevButton.pressed.connect(lambda: ret_rev_function())
+    ui.prcEndButton.pressed.connect(lambda: prc_end_function())
+    ui.almOvrButton.pressed.connect(lambda: alm_ovr_function())
+    ui.almRstButton.pressed.connect(lambda: alm_rst_function())
+    ui.lockRstButton.pressed.connect(lambda: lock_rst_function())
+
+    ui.cycleStartButton.released.connect(lambda: unpressed_function())
+    ui.cycleStopButton.released.connect(lambda: unpressed_function())
+    ui.drvButton.released.connect(lambda: unpressed_function())
+    ui.zLockButton.released.connect(lambda: unpressed_function())
+    ui.dryRunButton.released.connect(lambda: unpressed_function())
+    ui.jogButton.released.connect(lambda: unpressed_function())
+    ui.mdiButton.released.connect(lambda: unpressed_function())
+    ui.autoButton.released.connect(lambda: unpressed_function())
+    ui.xButton.released.connect(lambda: unpressed_function())
+    ui.yButton.released.connect(lambda: unpressed_function())
+    ui.zButton.released.connect(lambda: unpressed_function())
+    ui.plusButton.released.connect(lambda: unpressed_function())
+    ui.vvvButton.released.connect(lambda: unpressed_function())
+    ui.minusButton.released.connect(lambda: unpressed_function())
+    ui.ncRefButton.released.connect(lambda: unpressed_function())
+    ui.ncOffsetButton.released.connect(lambda: unpressed_function())
+    ui.retForButton.released.connect(lambda: unpressed_function())
+    ui.retRevButton.released.connect(lambda: unpressed_function())
+    ui.prcEndButton.released.connect(lambda: unpressed_function())
+    ui.almOvrButton.released.connect(lambda: unpressed_function())
+    ui.almRstButton.released.connect(lambda: unpressed_function())
+    ui.lockRstButton.released.connect(lambda: unpressed_function())
+
     ui.laserOnButton.clicked.connect(lambda: laser_on_function())
 
     MainWindow.show()
