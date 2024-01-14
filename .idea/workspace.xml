@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="added usb connect function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705194292407</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added usb connect function">
+      <option name="closed" value="true" />
+      <created>1705194490023</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705194490023</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

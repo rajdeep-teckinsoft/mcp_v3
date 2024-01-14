@@ -113,7 +113,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="usbConnectButton">
+          <widget class="QLabel" name="usbConnectionLabel">
            <property name="minimumSize">
             <size>
              <width>50</width>
@@ -129,19 +129,8 @@
            <property name="text">
             <string/>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>images/off/connection_off.png</normaloff>
-             <normalon>images/on/connection_on.png</normalon>images/off/connection_off.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>50</width>
-             <height>50</height>
-            </size>
-           </property>
-           <property name="flat">
-            <bool>true</bool>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>

@@ -262,15 +262,15 @@ if __name__ == "__main__":
                     serial.setPortName("/dev/ttyACM3")
                     ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
                     if not ret:
-                        ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_off))
+                        ui.usbConnectionLabel.setPixmap(icon_usb_connect_off)
                     else:
-                        ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+                        ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
                 else:
-                    ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+                    ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
             else:
-                ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+                ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
         else:
-            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+            ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
 
     usb_connect_function()
 
@@ -445,7 +445,6 @@ if __name__ == "__main__":
     ui.almRstButton.clicked.connect(lambda: alm_rst_function())
     ui.lockRstButton.clicked.connect(lambda: lock_rst_function())
     ui.laserOnButton.clicked.connect(lambda: laser_on_function())
-    ui.usbConnectButton.clicked.connect(lambda: usb_connect_function())
 
     MainWindow.show()
     sys.exit(app.exec_())
