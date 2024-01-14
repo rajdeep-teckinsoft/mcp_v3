@@ -247,6 +247,10 @@ if __name__ == "__main__":
 
     @QtCore.pyqtSlot()
     def usb_connect_function():
+        serial.setPortName("/dev/ttyACM0")
+        serial.setBaudRate(QtSerialPort.QSerialPort.BaudRate.Baud115200)
+        serial.readyRead.connect(lambda: serial_receive())
+        serial.setDataTerminalReady(True)
         ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
         if not ret:
             serial.setPortName("/dev/ttyACM1")
@@ -268,11 +272,6 @@ if __name__ == "__main__":
         else:
             ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
 
-
-    serial.setPortName("/dev/ttyACM0")
-    serial.setBaudRate(QtSerialPort.QSerialPort.BaudRate.Baud115200)
-    serial.readyRead.connect(lambda: serial_receive())
-    serial.setDataTerminalReady(True)
     usb_connect_function()
 
     unpressedTimer = QTimer()

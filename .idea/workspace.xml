@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated button on logic">
+    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="added usb connect function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705191644206</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added usb connect function">
+      <option name="closed" value="true" />
+      <created>1705194083062</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705194083062</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added usb connect function">
+      <option name="closed" value="true" />
+      <created>1705194292407</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705194292407</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +171,7 @@
     <MESSAGE value="checking serial receive" />
     <MESSAGE value="updated UI logic" />
     <MESSAGE value="updated button on logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated button on logic" />
+    <MESSAGE value="added usb connect function" />
+    <option name="LAST_COMMIT_MESSAGE" value="added usb connect function" />
   </component>
 </project>
