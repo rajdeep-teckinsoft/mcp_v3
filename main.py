@@ -420,7 +420,7 @@ if __name__ == "__main__":
         if ui.laserOnButton.isChecked():
             serial_send(LASER_ON_PRESSED)
         else:
-            unpressed_function()
+            serial_send(LASER_ON_UNPRESSED)
 
 
     ui.cycleStartButton.clicked.connect(lambda: cycle_start_function())
