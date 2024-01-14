@@ -80,6 +80,7 @@ if __name__ == "__main__":
     icon_alm_rst_on = QtGui.QPixmap("images/on/almrst.png")
     icon_lock_rst_on = QtGui.QPixmap("images/on/lockrst.png")
     icon_laser_ready_on = QtGui.QPixmap("images/laserready_on.png")
+    icon_usb_connect_on = QtGui.QPixmap("images/on/usb_connection.png")
 
     icon_cycle_start_off = QtGui.QPixmap("images/off/cyclestart.png")
     icon_cycle_stop_off = QtGui.QPixmap("images/off/cyclestop.png")
@@ -104,6 +105,7 @@ if __name__ == "__main__":
     icon_alm_rst_off = QtGui.QPixmap("images/off/almrst.png")
     icon_lock_rst_off = QtGui.QPixmap("images/off/lockrst.png")
     icon_laser_ready_off = QtGui.QPixmap("images/laserready_off.png")
+    icon_usb_connect_off = QtGui.QPixmap("images/off/usb_connection.png")
 
 
     @QtCore.pyqtSlot()
@@ -242,24 +244,47 @@ if __name__ == "__main__":
         serial.flush()
 
 
+    usbConnectionCheckTimer = QTimer()
     serial = QtSerialPort.QSerialPort()
+
+    @QtCore.pyqtSlot()
+    def usb_connection_check():
+        if serial.isOpen():
+            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+        else:
+            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_off))
+        usbConnectionCheckTimer.singleShot(2000, lambda: usb_connection_check)
+
+    @QtCore.pyqtSlot()
+    def usb_connect_function():
+        ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
+        usbConnectionCheckTimer.singleShot(2000, lambda: usb_connection_check)
+        if not ret:
+            serial.setPortName("/dev/ttyACM1")
+            ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
+            if not ret:
+                serial.setPortName("/dev/ttyACM2")
+                ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
+                if not ret:
+                    serial.setPortName("/dev/ttyACM3")
+                    ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
+                    if not ret:
+                        ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_off))
+                    else:
+                        ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+                else:
+                    ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+            else:
+                ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+        else:
+            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
+
+
     serial.setPortName("/dev/ttyACM0")
     serial.setBaudRate(QtSerialPort.QSerialPort.BaudRate.Baud115200)
     serial.readyRead.connect(lambda: serial_receive())
     serial.setDataTerminalReady(True)
-
-    ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
-    if not ret:
-        serial.setPortName("/dev/ttyACM1")
-        ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
-        if not ret:
-            serial.setPortName("/dev/ttyACM2")
-            ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
-            if not ret:
-                serial.setPortName("/dev/ttyACM3")
-                ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
-                if not ret:
-                    ui.proteck_logo.setStyleSheet("background-color: red")
+    usb_connect_function()
 
     unpressedTimer = QTimer()
 
@@ -432,6 +457,7 @@ if __name__ == "__main__":
     ui.almRstButton.clicked.connect(lambda: alm_rst_function())
     ui.lockRstButton.clicked.connect(lambda: lock_rst_function())
     ui.laserOnButton.clicked.connect(lambda: laser_on_function())
+    ui.usbConnectButton.clicked.connect(lambda: usb_connect_function())
 
     MainWindow.show()
     sys.exit(app.exec_())
