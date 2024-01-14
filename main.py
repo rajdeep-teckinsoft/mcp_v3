@@ -243,22 +243,11 @@ if __name__ == "__main__":
         serial.write(formatted_data)
         serial.flush()
 
-
-    usbConnectionCheckTimer = QTimer()
     serial = QtSerialPort.QSerialPort()
-
-    @QtCore.pyqtSlot()
-    def usb_connection_check():
-        if serial.isOpen():
-            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_on))
-        else:
-            ui.usbConnectButton.setIcon(QtGui.QIcon(icon_usb_connect_off))
-        usbConnectionCheckTimer.singleShot(2000, lambda: usb_connection_check)
 
     @QtCore.pyqtSlot()
     def usb_connect_function():
         ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
-        usbConnectionCheckTimer.singleShot(2000, lambda: usb_connection_check)
         if not ret:
             serial.setPortName("/dev/ttyACM1")
             ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
