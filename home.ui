@@ -40,14 +40,14 @@
    <string>Machine Control Panel</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(118, 118, 125);</string>
+   <string notr="true">background-color: rgb(96, 96, 96);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>50</y>
+      <y>60</y>
       <width>1781</width>
       <height>601</height>
      </rect>
