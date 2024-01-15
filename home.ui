@@ -39,6 +39,9 @@
   <property name="windowTitle">
    <string>Machine Control Panel</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(161, 163, 186);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">

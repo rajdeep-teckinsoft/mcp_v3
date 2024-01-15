@@ -289,133 +289,111 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def cycle_start_function():
         serial_send(CYCLE_START_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def cycle_stop_function():
         serial_send(CYCLE_STOP_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def drv_function():
         serial_send(DRV_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def z_lock_function():
         serial_send(Z_LOCK_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def dry_run_function():
         serial_send(DRY_RUN_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def jog_function():
         serial_send(JOG_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def mdi_function():
         serial_send(MDI_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def auto_function():
         serial_send(AUTO_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def x_jog_function():
         serial_send(X_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def y_jog_function():
         serial_send(Y_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def z_jog_function():
         serial_send(Z_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def plus_jog_function():
         serial_send(PLUS_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def minus_jog_function():
         serial_send(MINUS_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def vvv_jog_function():
         serial_send(VVV_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def nc_ref_function():
         serial_send(NC_REF_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def nc_offset_function():
         serial_send(NC_OFFSET_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def ret_for_function():
         serial_send(RET_FOR_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def ret_rev_function():
         serial_send(RET_REV_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def prc_end_function():
         serial_send(PRC_END_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def alm_ovr_function():
         serial_send(ALM_OVR_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def alm_rst_function():
         serial_send(ALM_RST_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
     def lock_rst_function():
         serial_send(LOCK_RST_PRESSED)
-        # unpressedTimer.singleShot(MOMENTARY_SWITCH_ON_TIME_MS, lambda: unpressed_function())
 
 
     @QtCore.pyqtSlot()
