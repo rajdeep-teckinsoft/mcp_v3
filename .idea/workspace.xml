@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated push buttons signals and slots">
+    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated background color">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705233486639</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updated background color">
+      <option name="closed" value="true" />
+      <created>1705302478378</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705302478378</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -207,6 +214,7 @@
     <MESSAGE value="updated button on logic" />
     <MESSAGE value="added usb connect function" />
     <MESSAGE value="updated push buttons signals and slots" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated push buttons signals and slots" />
+    <MESSAGE value="updated background color" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated background color" />
   </component>
 </project>

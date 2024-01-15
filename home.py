@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         font.setBold(False)
         font.setWeight(50)
         MainWindow.setFont(font)
-        MainWindow.setStyleSheet("background-color: rgb(161, 163, 186);")
+        MainWindow.setStyleSheet("background-color: rgb(118, 118, 125);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
