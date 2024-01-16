@@ -2,8 +2,7 @@ from PyQt5 import QtSerialPort
 from PyQt5.QtCore import Qt
 
 from home import *
-
-MOMENTARY_SWITCH_ON_TIME_MS = 500
+from connection import Ui_Dialog as Form
 
 # 1st column of keys
 CYCLE_START_PRESSED = '1'
@@ -58,55 +57,8 @@ if __name__ == "__main__":
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
 
-    icon_cycle_start_on = QtGui.QPixmap("images/on/cyclestart.png")
-    icon_cycle_stop_on = QtGui.QPixmap("images/on/cyclestop.png")
-    icon_drv_on = QtGui.QPixmap("images/on/drv.png")
-    icon_jog_on = QtGui.QPixmap("images/on/jog.png")
-    icon_x_on = QtGui.QPixmap("images/on/x.png")
-    icon_plus_on = QtGui.QPixmap("images/on/plus.png")
-    icon_zlock_on = QtGui.QPixmap("images/on/zlock.png")
-    icon_mdi_on = QtGui.QPixmap("images/on/mdi.png")
-    icon_y_on = QtGui.QPixmap("images/on/y.png")
-    icon_vvv_on = QtGui.QPixmap("images/on/vvv.png")
-    icon_dry_run_on = QtGui.QPixmap("images/on/dryrun.png")
-    icon_auto_on = QtGui.QPixmap("images/on/auto.png")
-    icon_z_on = QtGui.QPixmap("images/on/z.png")
-    icon_minus_on = QtGui.QPixmap("images/on/minus.png")
-    icon_nc_ref_on = QtGui.QPixmap("images/on/ncref.png")
-    icon_nc_offset_on = QtGui.QPixmap("images/on/ncoffset.png")
-    icon_ret_for_on = QtGui.QPixmap("images/on/retfor.png")
-    icon_ret_rev_on = QtGui.QPixmap("images/on/retrev.png")
-    icon_prc_end_on = QtGui.QPixmap("images/on/prcend.png")
-    icon_alm_ovr_on = QtGui.QPixmap("images/on/almovr.png")
-    icon_alm_rst_on = QtGui.QPixmap("images/on/almrst.png")
-    icon_lock_rst_on = QtGui.QPixmap("images/on/lockrst.png")
-    icon_laser_ready_on = QtGui.QPixmap("images/laserready_on.png")
-    icon_usb_connect_on = QtGui.QPixmap("images/on/usb_connection.png")
-
-    icon_cycle_start_off = QtGui.QPixmap("images/off/cyclestart.png")
-    icon_cycle_stop_off = QtGui.QPixmap("images/off/cyclestop.png")
-    icon_drv_off = QtGui.QPixmap("images/off/drv.png")
-    icon_jog_off = QtGui.QPixmap("images/off/jog.png")
-    icon_x_off = QtGui.QPixmap("images/off/x.png")
-    icon_plus_off = QtGui.QPixmap("images/off/plus.png")
-    icon_zlock_off = QtGui.QPixmap("images/off/zlock.png")
-    icon_mdi_off = QtGui.QPixmap("images/off/mdi.png")
-    icon_y_off = QtGui.QPixmap("images/off/y.png")
-    icon_vvv_off = QtGui.QPixmap("images/off/vvv.png")
-    icon_dry_run_off = QtGui.QPixmap("images/off/dryrun.png")
-    icon_auto_off = QtGui.QPixmap("images/off/auto.png")
-    icon_z_off = QtGui.QPixmap("images/off/z.png")
-    icon_minus_off = QtGui.QPixmap("images/off/minus.png")
-    icon_nc_ref_off = QtGui.QPixmap("images/off/ncref.png")
-    icon_nc_offset_off = QtGui.QPixmap("images/off/ncoffset.png")
-    icon_ret_for_off = QtGui.QPixmap("images/off/retfor.png")
-    icon_ret_rev_off = QtGui.QPixmap("images/off/retrev.png")
-    icon_prc_end_off = QtGui.QPixmap("images/off/prcend.png")
-    icon_alm_ovr_off = QtGui.QPixmap("images/off/almovr.png")
-    icon_alm_rst_off = QtGui.QPixmap("images/off/almrst.png")
-    icon_lock_rst_off = QtGui.QPixmap("images/off/lockrst.png")
-    icon_laser_ready_off = QtGui.QPixmap("images/laserready_off.png")
-    icon_usb_connect_off = QtGui.QPixmap("images/off/usb_connection.png")
+    serial = QtSerialPort.QSerialPort()
+    ports = QtSerialPort.QSerialPortInfo.availablePorts()
 
 
     @QtCore.pyqtSlot()
@@ -118,124 +70,126 @@ if __name__ == "__main__":
             array_data = list(formatted_data)
 
             if array_data[0] == '1':
-                ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_on))
+                ui.cycleStartButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_off))
+                ui.cycleStartButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[1] == '1':
-                ui.cycleStopButton.setIcon(QtGui.QIcon(icon_cycle_stop_on))
+                ui.cycleStopButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.cycleStopButton.setIcon(QtGui.QIcon(icon_cycle_stop_off))
+                ui.cycleStopButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[2] == '1':
-                ui.drvButton.setIcon(QtGui.QIcon(icon_drv_on))
+                ui.drvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.drvButton.setIcon(QtGui.QIcon(icon_drv_off))
+                ui.drvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[3] == '1':
-                ui.jogButton.setIcon(QtGui.QIcon(icon_jog_on))
+                ui.jogButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.jogButton.setIcon(QtGui.QIcon(icon_jog_off))
+                ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[4] == '1':
-                ui.xButton.setIcon(QtGui.QIcon(icon_x_on))
+                ui.xButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.xButton.setIcon(QtGui.QIcon(icon_x_off))
+                ui.xButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[5] == '1':
-                ui.plusButton.setIcon(QtGui.QIcon(icon_plus_on))
+                ui.plusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.plusButton.setIcon(QtGui.QIcon(icon_plus_off))
+                ui.plusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[6] == '1':
-                ui.zLockButton.setIcon(QtGui.QIcon(icon_zlock_on))
+                ui.zLockButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.zLockButton.setIcon(QtGui.QIcon(icon_zlock_off))
+                ui.zLockButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[7] == '1':
-                ui.mdiButton.setIcon(QtGui.QIcon(icon_mdi_on))
+                ui.mdiButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.mdiButton.setIcon(QtGui.QIcon(icon_mdi_off))
+                ui.mdiButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[8] == '1':
-                ui.yButton.setIcon(QtGui.QIcon(icon_y_on))
+                ui.yButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.yButton.setIcon(QtGui.QIcon(icon_y_off))
+                ui.yButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[9] == '1':
-                ui.vvvButton.setIcon(QtGui.QIcon(icon_vvv_on))
+                ui.vvvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.vvvButton.setIcon(QtGui.QIcon(icon_vvv_off))
+                ui.vvvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[10] == '1':
-                ui.dryRunButton.setIcon(QtGui.QIcon(icon_dry_run_on))
+                ui.dryRunButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.dryRunButton.setIcon(QtGui.QIcon(icon_dry_run_off))
+                ui.dryRunButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[11] == '1':
-                ui.autoButton.setIcon(QtGui.QIcon(icon_auto_on))
+                ui.autoButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.autoButton.setIcon(QtGui.QIcon(icon_auto_off))
+                ui.autoButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[12] == '1':
-                ui.zButton.setIcon(QtGui.QIcon(icon_z_on))
+                ui.zButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.zButton.setIcon(QtGui.QIcon(icon_z_off))
+                ui.zButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[13] == '1':
-                ui.minusButton.setIcon(QtGui.QIcon(icon_minus_on))
+                ui.minusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.minusButton.setIcon(QtGui.QIcon(icon_minus_off))
+                ui.minusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[14] == '1':
-                ui.ncRefButton.setIcon(QtGui.QIcon(icon_nc_ref_on))
+                ui.ncRefButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.ncRefButton.setIcon(QtGui.QIcon(icon_nc_ref_off))
+                ui.ncRefButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[15] == '1':
-                ui.ncOffsetButton.setIcon(QtGui.QIcon(icon_nc_offset_on))
+                ui.ncOffsetButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.ncOffsetButton.setIcon(QtGui.QIcon(icon_nc_offset_off))
+                ui.ncOffsetButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[16] == '1':
-                ui.retForButton.setIcon(QtGui.QIcon(icon_ret_for_on))
+                ui.retForButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.retForButton.setIcon(QtGui.QIcon(icon_ret_for_off))
+                ui.retForButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[17] == '1':
-                ui.retRevButton.setIcon(QtGui.QIcon(icon_ret_rev_on))
+                ui.retRevButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.retRevButton.setIcon(QtGui.QIcon(icon_ret_rev_off))
+                ui.retRevButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[18] == '1':
-                ui.prcEndButton.setIcon(QtGui.QIcon(icon_prc_end_on))
+                ui.prcEndButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.prcEndButton.setIcon(QtGui.QIcon(icon_prc_end_off))
+                ui.prcEndButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[19] == '1':
-                ui.almOvrButton.setIcon(QtGui.QIcon(icon_alm_ovr_on))
+                ui.almOvrButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.almOvrButton.setIcon(QtGui.QIcon(icon_alm_ovr_off))
+                ui.almOvrButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[20] == '1':
-                ui.almRstButton.setIcon(QtGui.QIcon(icon_alm_rst_on))
+                ui.almRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.almRstButton.setIcon(QtGui.QIcon(icon_alm_rst_off))
+                ui.almRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[21] == '1':
-                ui.lockRstButton.setIcon(QtGui.QIcon(icon_lock_rst_on))
+                ui.lockRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             else:
-                ui.lockRstButton.setIcon(QtGui.QIcon(icon_lock_rst_off))
+                ui.lockRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             # if array_data[22] == '1':
-            #     ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_on))
+            #     ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             # else:
-            #     ui.cycleStartButton.setIcon(QtGui.QIcon(icon_cycle_start_off))
+            #     ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[23] == '1':
-                ui.laserReadyLamp.setPixmap(icon_laser_ready_on)
+                ui.laserReadyLamp.setStyleSheet("background-color: rgb(249, 183, 93); color: rgb(255, 255, 255); "
+                                                "border-radius: 65px")
             else:
-                ui.laserReadyLamp.setPixmap(icon_laser_ready_off)
+                ui.laserReadyLamp.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255); "
+                                                "border-radius: 65px")
 
 
     @QtCore.pyqtSlot()
@@ -245,7 +199,32 @@ if __name__ == "__main__":
         serial.flush()
 
 
-    serial = QtSerialPort.QSerialPort()
+    def connection_dialog():
+        connection = QtWidgets.QDialog()
+        connection.ui = Form()
+        connection.ui.setupUi(connection)
+        for port in ports:
+            connection.ui.comboBox.addItem(port.portName())
+
+        connection.ui.pushButton.clicked.connect(lambda: dialog_connect_function())
+
+        @QtCore.pyqtSlot()
+        def dialog_connect_function():
+            selected_port = connection.ui.comboBox.currentText()
+            if not selected_port:
+                connection.ui.messageLabel.setText("No port selected")
+            else:
+                serial.setPortName(selected_port)
+                serial.setBaudRate(QtSerialPort.QSerialPort.BaudRate.Baud115200)
+                serial.readyRead.connect(lambda: serial_receive())
+                serial.setDataTerminalReady(True)
+                ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
+                if not ret:
+                    connection.ui.messageLabel.setText("Not connected!")
+                else:
+                    connection.close()
+
+        connection.exec_()
 
 
     @QtCore.pyqtSlot()
@@ -265,20 +244,9 @@ if __name__ == "__main__":
                     serial.setPortName("/dev/ttyACM3")
                     ret = serial.open(QtSerialPort.QSerialPort.OpenModeFlag.ReadWrite)
                     if not ret:
-                        ui.usbConnectionLabel.setPixmap(icon_usb_connect_off)
-                    else:
-                        ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
-                else:
-                    ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
-            else:
-                ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
-        else:
-            ui.usbConnectionLabel.setPixmap(icon_usb_connect_on)
-
+                        connection_dialog()
 
     usb_connect_function()
-
-    # unpressedTimer = QTimer()
 
     # set up push button functions---------------------------------------
     @QtCore.pyqtSlot()
@@ -399,8 +367,10 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def laser_on_function():
         if ui.laserOnButton.isChecked():
+            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
             serial_send(LASER_ON_PRESSED)
         else:
+            ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
             serial_send(LASER_ON_UNPRESSED)
 
 

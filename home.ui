@@ -40,7 +40,7 @@
    <string>Machine Control Panel</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(96, 96, 96);</string>
+   <string notr="true">background-color: rgb(48, 48, 48);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
@@ -133,32 +133,6 @@
         </spacer>
        </item>
        <item>
-        <spacer name="verticalSpacer_15">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_14">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
         <spacer name="verticalSpacer_12">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -172,59 +146,17 @@
         </spacer>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <spacer name="horizontalSpacer_14">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="usbConnectionLabel">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>50</width>
-             <height>50</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>50</width>
-             <height>50</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_15">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+        <spacer name="verticalSpacer_15">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <spacer name="verticalSpacer">
@@ -255,14 +187,21 @@
              <height>120</height>
             </size>
            </property>
-           <property name="text">
-            <string/>
+           <property name="font">
+            <font>
+             <family>Century Gothic</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>images/off/cyclestart.png</normaloff>
-             <normalon>images/on/cyclestart.png</normalon>
-             <disabledon>images/disabled/cyclestart.png</disabledon>images/off/cyclestart.png</iconset>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Cycle
+Start</string>
            </property>
            <property name="iconSize">
             <size>
@@ -274,7 +213,7 @@
             <bool>false</bool>
            </property>
            <property name="flat">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -305,14 +244,21 @@
              <height>120</height>
             </size>
            </property>
-           <property name="text">
-            <string/>
+           <property name="font">
+            <font>
+             <family>Century Gothic</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>images/off/cyclestop.png</normaloff>
-             <normalon>images/on/cyclestop.png</normalon>
-             <disabledon>images/disabled/cyclestop.png</disabledon>images/off/cyclestop.png</iconset>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Cycle
+Stop</string>
            </property>
            <property name="iconSize">
             <size>
@@ -324,7 +270,7 @@
             <bool>false</bool>
            </property>
            <property name="flat">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -389,17 +335,23 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/x.png</normaloff>
-           <normalon>images/on/x.png</normalon>
-           <disabledon>images/disabled/x.png</disabledon>images/off/x.png</iconset>
+         <property name="text">
+          <string>X</string>
          </property>
          <property name="iconSize">
           <size>
@@ -414,7 +366,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -432,17 +384,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/mdi.png</normaloff>
-           <normalon>images/on/mdi.png</normalon>
-           <disabledon>images/disabled/mdi.png</disabledon>images/off/mdi.png</iconset>
+         <property name="text">
+          <string>Mdi
+Mode</string>
          </property>
          <property name="iconSize">
           <size>
@@ -457,7 +416,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -501,17 +460,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/jog.png</normaloff>
-           <normalon>images/on/jog.png</normalon>
-           <disabledon>images/disabled/dryrun.png</disabledon>images/off/jog.png</iconset>
+         <property name="text">
+          <string>Jog
+Mode</string>
          </property>
          <property name="iconSize">
           <size>
@@ -526,7 +492,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -570,17 +536,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/auto.png</normaloff>
-           <normalon>images/on/auto.png</normalon>
-           <disabledon>images/disabled/auto.png</disabledon>images/off/auto.png</iconset>
+         <property name="text">
+          <string>Auto
+Mode</string>
          </property>
          <property name="iconSize">
           <size>
@@ -595,7 +568,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -613,17 +586,23 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/plus.png</normaloff>
-           <normalon>images/on/plus.png</normalon>
-           <disabledon>images/disabled/plus.png</disabledon>images/off/plus.png</iconset>
+         <property name="text">
+          <string>+</string>
          </property>
          <property name="iconSize">
           <size>
@@ -638,7 +617,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -669,17 +648,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/dryrun.png</normaloff>
-           <normalon>images/on/dryrun.png</normalon>
-           <disabledon>images/disabled/dryrun.png</disabledon>images/off/dryrun.png</iconset>
+         <property name="text">
+          <string>Dry
+Run</string>
          </property>
          <property name="iconSize">
           <size>
@@ -694,7 +680,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -712,17 +698,23 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/z.png</normaloff>
-           <normalon>images/on/z.png</normalon>
-           <disabledon>images/disabled/z.png</disabledon>images/off/z.png</iconset>
+         <property name="text">
+          <string>Z</string>
          </property>
          <property name="iconSize">
           <size>
@@ -737,7 +729,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -755,17 +747,23 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/minus.png</normaloff>
-           <normalon>images/on/minus.png</normalon>
-           <disabledon>images/disabled/minus.png</disabledon>images/off/minus.png</iconset>
+         <property name="text">
+          <string>-</string>
          </property>
          <property name="iconSize">
           <size>
@@ -780,7 +778,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -798,17 +796,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/vvv.png</normaloff>
-           <normalon>images/on/vvv.png</normalon>
-           <disabledon>images/disabled/vvv.png</disabledon>images/off/vvv.png</iconset>
+         <property name="text">
+          <string>Program
+Zero</string>
          </property>
          <property name="iconSize">
           <size>
@@ -823,7 +828,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -841,17 +846,23 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/y.png</normaloff>
-           <normalon>images/on/y.png</normalon>
-           <disabledon>images/disabled/y.png</disabledon>images/off/y.png</iconset>
+         <property name="text">
+          <string>Y</string>
          </property>
          <property name="iconSize">
           <size>
@@ -866,7 +877,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -884,17 +895,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/zlock.png</normaloff>
-           <normalon>images/on/zlock.png</normalon>
-           <disabledon>images/disabled/zlock.png</disabledon>images/off/zlock.png</iconset>
+         <property name="text">
+          <string>Z Axis
+Lock</string>
          </property>
          <property name="iconSize">
           <size>
@@ -909,7 +927,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -927,17 +945,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/drv.png</normaloff>
-           <normalon>images/on/drv.png</normalon>
-           <disabledon>images/disabled/drv.png</disabledon>images/off/drv.png</iconset>
+         <property name="text">
+          <string>Drive
+On</string>
          </property>
          <property name="iconSize">
           <size>
@@ -952,7 +977,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1015,17 +1040,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/ncref.png</normaloff>
-           <normalon>images/on/ncref.png</normalon>
-           <disabledon>images/disabled/ncref.png</disabledon>images/off/ncref.png</iconset>
+         <property name="text">
+          <string>NC
+Reference</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1040,7 +1072,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1058,17 +1090,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/ncoffset.png</normaloff>
-           <normalon>images/on/ncoffset.png</normalon>
-           <disabledon>images/disabled/ncoffset.png</disabledon>images/off/ncoffset.png</iconset>
+         <property name="text">
+          <string>NC
+Offset</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1083,7 +1122,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1114,17 +1153,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/retrev.png</normaloff>
-           <normalon>images/on/retrev.png</normalon>
-           <disabledon>images/disabled/retrev.png</disabledon>images/off/retrev.png</iconset>
+         <property name="text">
+          <string>Retrace
+Reverse</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1139,7 +1185,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1157,17 +1203,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/retfor.png</normaloff>
-           <normalon>images/on/retfor.png</normalon>
-           <disabledon>images/disabled/retfor.png</disabledon>images/off/retfor.png</iconset>
+         <property name="text">
+          <string>Retrace
+Forward</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1182,7 +1235,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1310,17 +1363,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/lockrst.png</normaloff>
-           <normalon>images/on/lockrst.png</normalon>
-           <disabledon>images/disabled/lockrst.png</disabledon>images/off/lockrst.png</iconset>
+         <property name="text">
+          <string>Lock
+Reset</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1335,7 +1395,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1353,17 +1413,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/almovr.png</normaloff>
-           <normalon>images/on/almovr.png</normalon>
-           <disabledon>images/disabled/almovr.png</disabledon>images/off/almovr.png</iconset>
+         <property name="text">
+          <string>Alarm
+Over</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1378,7 +1445,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1396,17 +1463,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/prcend.png</normaloff>
-           <normalon>images/on/prcend.png</normalon>
-           <disabledon>images/disabled/prcend.png</disabledon>images/off/prcend.png</iconset>
+         <property name="text">
+          <string>Piercing
+End</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1421,7 +1495,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1439,17 +1513,24 @@
            <height>120</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/almrst.png</normaloff>
-           <normalon>images/on/almrst.png</normalon>
-           <disabledon>images/disabled/almrst.png</disabledon>images/off/almrst.png</iconset>
+         <property name="text">
+          <string>Alarm
+Reset</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1464,7 +1545,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1527,17 +1608,24 @@
            <height>130</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
-         <property name="text">
-          <string/>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);</string>
          </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>images/off/laseron.png</normaloff>
-           <normalon>images/on/laseron.png</normalon>
-           <disabledon>images/disabled/laseron.png</disabledon>images/off/laseron.png</iconset>
+         <property name="text">
+          <string>Laser
+On</string>
          </property>
          <property name="iconSize">
           <size>
@@ -1552,7 +1640,7 @@
           <bool>false</bool>
          </property>
          <property name="flat">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -1609,11 +1697,22 @@
            <height>130</height>
           </size>
          </property>
-         <property name="text">
-          <string/>
+         <property name="font">
+          <font>
+           <family>Century Gothic</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
          </property>
-         <property name="pixmap">
-          <pixmap>images/laserready_off.png</pixmap>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(96, 96, 96);
+color: rgb(255, 255, 255);
+border-radius: 65px;</string>
+         </property>
+         <property name="text">
+          <string>Laser
+Ready</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>

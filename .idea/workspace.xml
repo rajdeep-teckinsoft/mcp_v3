@@ -4,15 +4,100 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated background color">
+    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="added prolaser dyna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/almovr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/almrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/auto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/cyclestart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/cyclestop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/drv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/dryrun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/jog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/laseron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/laserready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/lockrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/mdi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/ncoffset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/ncref.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/prcend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/retfor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/retrev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/vvv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/disabled/zlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/laserready_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/laserready_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/laserready_starting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/almovr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/almrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/auto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/cyclestart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/cyclestop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/drv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/dryrun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/jog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/laseron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/laserready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/lockrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/mdi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/ncoffset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/ncref.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/prcend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/retfor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/retrev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/usb_connection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/vvv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/off/zlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/almovr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/almrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/auto.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/cyclestart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/cyclestop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/drv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/dryrun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/jog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/laseron.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/laserready.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/lockrst.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/mdi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/ncoffset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/ncref.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/prcend.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/retfor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/retrev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/usb_connection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/vvv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/on/zlock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -228,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705304662933</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added prolaser dyna">
+      <option name="closed" value="true" />
+      <created>1705309164471</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705309164471</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,6 +332,7 @@
     <MESSAGE value="added usb connect function" />
     <MESSAGE value="updated push buttons signals and slots" />
     <MESSAGE value="updated background color" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated background color" />
+    <MESSAGE value="added prolaser dyna" />
+    <option name="LAST_COMMIT_MESSAGE" value="added prolaser dyna" />
   </component>
 </project>
