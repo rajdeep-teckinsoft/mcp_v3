@@ -85,9 +85,9 @@ if __name__ == "__main__":
                 ui.drvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[3] == '1':
-                ui.jogButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.jogButton.setStyleSheet("background-color: rgb(250, 122, 72)")
             else:
-                ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96)")
 
             if array_data[4] == '1':
                 ui.xButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
