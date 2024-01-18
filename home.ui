@@ -197,7 +197,7 @@
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
            </property>
            <property name="text">
             <string>Cycle
@@ -254,7 +254,7 @@ Start</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
            </property>
            <property name="text">
             <string>Cycle
@@ -348,7 +348,7 @@ Stop</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>X</string>
@@ -397,7 +397,7 @@ color: rgb(255, 255, 255);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Mdi
@@ -473,7 +473,7 @@ Mode</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Jog
@@ -549,7 +549,7 @@ Mode</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Auto
@@ -599,7 +599,7 @@ Mode</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>+</string>
@@ -661,7 +661,7 @@ color: rgb(255, 255, 255);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Dry
@@ -711,7 +711,7 @@ Run</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Z</string>
@@ -760,7 +760,7 @@ color: rgb(255, 255, 255);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>-</string>
@@ -809,7 +809,7 @@ color: rgb(255, 255, 255);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Program
@@ -859,7 +859,7 @@ Zero</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Y</string>
@@ -908,7 +908,7 @@ color: rgb(255, 255, 255);</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Z Axis
@@ -958,7 +958,7 @@ Lock</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Drive
@@ -1053,7 +1053,7 @@ On</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>NC
@@ -1103,7 +1103,7 @@ Ref</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>NC
@@ -1166,7 +1166,7 @@ Offset</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Retrace
@@ -1216,7 +1216,7 @@ Reverse</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Retrace
@@ -1376,7 +1376,7 @@ Forward</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Lock
@@ -1426,7 +1426,7 @@ Reset</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Alarm
@@ -1476,7 +1476,7 @@ Over</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Piercing
@@ -1526,7 +1526,7 @@ End</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Alarm
@@ -1621,7 +1621,7 @@ Reset</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);</string>
+color: rgb(48, 48, 48);</string>
          </property>
          <property name="text">
           <string>Laser
@@ -1707,7 +1707,7 @@ On</string>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(96, 96, 96);
-color: rgb(255, 255, 255);
+color: rgb(48, 48, 48);
 border-radius: 65px;</string>
          </property>
          <property name="text">

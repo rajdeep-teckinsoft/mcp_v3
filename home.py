@@ -76,7 +76,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.cycleStartButton.setFont(font)
         self.cycleStartButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.cycleStartButton.setIconSize(QtCore.QSize(120, 120))
         self.cycleStartButton.setCheckable(False)
         self.cycleStartButton.setFlat(False)
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.cycleStopButton.setFont(font)
         self.cycleStopButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.cycleStopButton.setIconSize(QtCore.QSize(120, 120))
         self.cycleStopButton.setCheckable(False)
         self.cycleStopButton.setFlat(False)
@@ -130,7 +130,7 @@ class Ui_MainWindow(object):
         self.xButton.setFont(font)
         self.xButton.setAutoFillBackground(False)
         self.xButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.xButton.setIconSize(QtCore.QSize(120, 120))
         self.xButton.setCheckable(False)
         self.xButton.setChecked(False)
@@ -148,7 +148,7 @@ class Ui_MainWindow(object):
         self.mdiButton.setFont(font)
         self.mdiButton.setAutoFillBackground(False)
         self.mdiButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.mdiButton.setIconSize(QtCore.QSize(120, 120))
         self.mdiButton.setCheckable(False)
         self.mdiButton.setChecked(False)
@@ -170,7 +170,7 @@ class Ui_MainWindow(object):
         self.jogButton.setFont(font)
         self.jogButton.setAutoFillBackground(False)
         self.jogButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.jogButton.setIconSize(QtCore.QSize(120, 120))
         self.jogButton.setCheckable(False)
         self.jogButton.setChecked(False)
@@ -192,7 +192,7 @@ class Ui_MainWindow(object):
         self.autoButton.setFont(font)
         self.autoButton.setAutoFillBackground(False)
         self.autoButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.autoButton.setIconSize(QtCore.QSize(120, 120))
         self.autoButton.setCheckable(False)
         self.autoButton.setChecked(False)
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
         self.plusButton.setFont(font)
         self.plusButton.setAutoFillBackground(False)
         self.plusButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.plusButton.setIconSize(QtCore.QSize(120, 120))
         self.plusButton.setCheckable(False)
         self.plusButton.setChecked(False)
@@ -230,7 +230,7 @@ class Ui_MainWindow(object):
         self.dryRunButton.setFont(font)
         self.dryRunButton.setAutoFillBackground(False)
         self.dryRunButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.dryRunButton.setIconSize(QtCore.QSize(120, 120))
         self.dryRunButton.setCheckable(False)
         self.dryRunButton.setChecked(False)
@@ -248,7 +248,7 @@ class Ui_MainWindow(object):
         self.zButton.setFont(font)
         self.zButton.setAutoFillBackground(False)
         self.zButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.zButton.setIconSize(QtCore.QSize(120, 120))
         self.zButton.setCheckable(False)
         self.zButton.setChecked(False)
@@ -266,7 +266,7 @@ class Ui_MainWindow(object):
         self.minusButton.setFont(font)
         self.minusButton.setAutoFillBackground(False)
         self.minusButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.minusButton.setIconSize(QtCore.QSize(120, 120))
         self.minusButton.setCheckable(False)
         self.minusButton.setChecked(False)
@@ -284,7 +284,7 @@ class Ui_MainWindow(object):
         self.vvvButton.setFont(font)
         self.vvvButton.setAutoFillBackground(False)
         self.vvvButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.vvvButton.setIconSize(QtCore.QSize(120, 120))
         self.vvvButton.setCheckable(False)
         self.vvvButton.setChecked(False)
@@ -302,7 +302,7 @@ class Ui_MainWindow(object):
         self.yButton.setFont(font)
         self.yButton.setAutoFillBackground(False)
         self.yButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.yButton.setIconSize(QtCore.QSize(120, 120))
         self.yButton.setCheckable(False)
         self.yButton.setChecked(False)
@@ -320,7 +320,7 @@ class Ui_MainWindow(object):
         self.zLockButton.setFont(font)
         self.zLockButton.setAutoFillBackground(False)
         self.zLockButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.zLockButton.setIconSize(QtCore.QSize(120, 120))
         self.zLockButton.setCheckable(False)
         self.zLockButton.setChecked(False)
@@ -338,7 +338,7 @@ class Ui_MainWindow(object):
         self.drvButton.setFont(font)
         self.drvButton.setAutoFillBackground(False)
         self.drvButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.drvButton.setIconSize(QtCore.QSize(120, 120))
         self.drvButton.setCheckable(False)
         self.drvButton.setChecked(False)
@@ -374,7 +374,7 @@ class Ui_MainWindow(object):
         self.ncRefButton.setFont(font)
         self.ncRefButton.setAutoFillBackground(False)
         self.ncRefButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.ncRefButton.setIconSize(QtCore.QSize(120, 120))
         self.ncRefButton.setCheckable(False)
         self.ncRefButton.setChecked(False)
@@ -392,7 +392,7 @@ class Ui_MainWindow(object):
         self.ncOffsetButton.setFont(font)
         self.ncOffsetButton.setAutoFillBackground(False)
         self.ncOffsetButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.ncOffsetButton.setIconSize(QtCore.QSize(120, 120))
         self.ncOffsetButton.setCheckable(False)
         self.ncOffsetButton.setChecked(False)
@@ -412,7 +412,7 @@ class Ui_MainWindow(object):
         self.retRevButton.setFont(font)
         self.retRevButton.setAutoFillBackground(False)
         self.retRevButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.retRevButton.setIconSize(QtCore.QSize(120, 120))
         self.retRevButton.setCheckable(False)
         self.retRevButton.setChecked(False)
@@ -430,7 +430,7 @@ class Ui_MainWindow(object):
         self.retForButton.setFont(font)
         self.retForButton.setAutoFillBackground(False)
         self.retForButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.retForButton.setIconSize(QtCore.QSize(120, 120))
         self.retForButton.setCheckable(False)
         self.retForButton.setChecked(False)
@@ -476,7 +476,7 @@ class Ui_MainWindow(object):
         self.lockRstButton.setFont(font)
         self.lockRstButton.setAutoFillBackground(False)
         self.lockRstButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.lockRstButton.setIconSize(QtCore.QSize(120, 120))
         self.lockRstButton.setCheckable(False)
         self.lockRstButton.setChecked(False)
@@ -494,7 +494,7 @@ class Ui_MainWindow(object):
         self.almOvrButton.setFont(font)
         self.almOvrButton.setAutoFillBackground(False)
         self.almOvrButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.almOvrButton.setIconSize(QtCore.QSize(120, 120))
         self.almOvrButton.setCheckable(False)
         self.almOvrButton.setChecked(False)
@@ -512,7 +512,7 @@ class Ui_MainWindow(object):
         self.prcEndButton.setFont(font)
         self.prcEndButton.setAutoFillBackground(False)
         self.prcEndButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.prcEndButton.setIconSize(QtCore.QSize(120, 120))
         self.prcEndButton.setCheckable(False)
         self.prcEndButton.setChecked(False)
@@ -530,7 +530,7 @@ class Ui_MainWindow(object):
         self.almRstButton.setFont(font)
         self.almRstButton.setAutoFillBackground(False)
         self.almRstButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.almRstButton.setIconSize(QtCore.QSize(120, 120))
         self.almRstButton.setCheckable(False)
         self.almRstButton.setChecked(False)
@@ -566,7 +566,7 @@ class Ui_MainWindow(object):
         self.laserOnButton.setFont(font)
         self.laserOnButton.setAutoFillBackground(False)
         self.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);")
+"color: rgb(48, 48, 48);")
         self.laserOnButton.setIconSize(QtCore.QSize(130, 130))
         self.laserOnButton.setCheckable(True)
         self.laserOnButton.setChecked(False)
@@ -589,7 +589,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.laserReadyLamp.setFont(font)
         self.laserReadyLamp.setStyleSheet("background-color: rgb(96, 96, 96);\n"
-"color: rgb(255, 255, 255);\n"
+"color: rgb(48, 48, 48);\n"
 "border-radius: 65px;")
         self.laserReadyLamp.setAlignment(QtCore.Qt.AlignCenter)
         self.laserReadyLamp.setObjectName("laserReadyLamp")

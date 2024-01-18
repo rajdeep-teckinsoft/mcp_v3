@@ -185,10 +185,10 @@ if __name__ == "__main__":
             #     ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
 
             if array_data[23] == '1':
-                ui.laserReadyLamp.setStyleSheet("background-color: rgb(249, 183, 93); color: rgb(96, 96, 96); "
+                ui.laserReadyLamp.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(48, 48, 48); "
                                                 "border-radius: 65px")
             else:
-                ui.laserReadyLamp.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255); "
+                ui.laserReadyLamp.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(48, 48, 48); "
                                                 "border-radius: 65px")
 
 
