@@ -70,114 +70,114 @@ if __name__ == "__main__":
             array_data = list(formatted_data)
 
             if array_data[0] == '1':
-                ui.cycleStartButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.cycleStartButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.cycleStartButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.cycleStartButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[1] == '1':
-                ui.cycleStopButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.cycleStopButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.cycleStopButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.cycleStopButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[2] == '1':
-                ui.drvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.drvButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.drvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.drvButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[3] == '1':
-                ui.jogButton.setStyleSheet("background-color: rgb(250, 122, 72)")
+                ui.jogButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.jogButton.setStyleSheet("background-color: rgb(96, 96, 96)")
+                ui.jogButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[4] == '1':
-                ui.xButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.xButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.xButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.xButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[5] == '1':
-                ui.plusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.plusButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.plusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.plusButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[6] == '1':
-                ui.zLockButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.zLockButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.zLockButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.zLockButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[7] == '1':
-                ui.mdiButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.mdiButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.mdiButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.mdiButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[8] == '1':
-                ui.yButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.yButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.yButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.yButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[9] == '1':
-                ui.vvvButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.vvvButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.vvvButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.vvvButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[10] == '1':
-                ui.dryRunButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.dryRunButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.dryRunButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.dryRunButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[11] == '1':
-                ui.autoButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.autoButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.autoButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.autoButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[12] == '1':
-                ui.zButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.zButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.zButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.zButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[13] == '1':
-                ui.minusButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.minusButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.minusButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.minusButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[14] == '1':
-                ui.ncRefButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.ncRefButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.ncRefButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.ncRefButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[15] == '1':
-                ui.ncOffsetButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.ncOffsetButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.ncOffsetButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.ncOffsetButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[16] == '1':
-                ui.retForButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.retForButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.retForButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.retForButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[17] == '1':
-                ui.retRevButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.retRevButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.retRevButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.retRevButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[18] == '1':
-                ui.prcEndButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.prcEndButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.prcEndButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.prcEndButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[19] == '1':
-                ui.almOvrButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.almOvrButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.almOvrButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.almOvrButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[20] == '1':
-                ui.almRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.almRstButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.almRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.almRstButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             if array_data[21] == '1':
-                ui.lockRstButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+                ui.lockRstButton.setStyleSheet("color: rgb(250, 122, 72)")
             else:
-                ui.lockRstButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+                ui.lockRstButton.setStyleSheet("color: rgb(48, 48, 48)")
 
             # if array_data[22] == '1':
             #     ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(255, 255, 255)")
@@ -367,10 +367,10 @@ if __name__ == "__main__":
     @QtCore.pyqtSlot()
     def laser_on_function():
         if ui.laserOnButton.isChecked():
-            ui.laserOnButton.setStyleSheet("background-color: rgb(250, 122, 72); color: rgb(96, 96, 96)")
+            ui.laserOnButton.setStyleSheet("color: rgb(250, 122, 72)")
             serial_send(LASER_ON_PRESSED)
         else:
-            ui.laserOnButton.setStyleSheet("background-color: rgb(96, 96, 96); color: rgb(255, 255, 255)")
+            ui.laserOnButton.setStyleSheet("color: rgb(48, 48, 48)")
             serial_send(LASER_ON_UNPRESSED)
 
 
