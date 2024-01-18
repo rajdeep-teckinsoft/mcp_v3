@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated button colors">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/home.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="39fb3dfb-f4d7-482e-b0c9-b41e73ae4932" name="Changes" comment="updated button colors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -277,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705582651274</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="updated button colors">
+      <option name="closed" value="true" />
+      <created>1705583245256</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1705583245256</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
